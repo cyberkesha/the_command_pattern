@@ -22,11 +22,16 @@ public class Main {
 		Light light = new Light();
 		
 		// Команда с получателем (исполнителем команды)
-		LightOnCommand lightOn = new LightOnCommand(light);
-		LightOffCommand lightOff = new LightOffCommand(light);
+		// LightOnCommand lightOn = new LightOnCommand(light);
+		// LightOffCommand lightOff = new LightOffCommand(light);
 		
-		remote.setCommand(0, lightOn, lightOff);
+		// remote.setCommand(0, lightOn, lightOff);
 
+		// Использование лямбда-выражений
+		remote.setCommand(0, 
+				              () -> light.on(),
+				              () -> light.off());
+		
 		// По нажатию выполняется команда-объект
 		remote.onButtonWasPressed(0);
 		remote.offButtonWasPressed(0);
@@ -35,10 +40,15 @@ public class Main {
 		System.out.print("Tv:\n\n");
 		
 		Tv tv = new Tv();
-		TvOnCommand tvOn = new TvOnCommand(tv);
-		TvOffCommand tvOff = new TvOffCommand(tv);
+		// TvOnCommand tvOn = new TvOnCommand(tv);
+		// TvOffCommand tvOff = new TvOffCommand(tv);
 		
-		remote.setCommand(1, tvOn, tvOff);
+		// remote.setCommand(1, tvOn, tvOff);
+		
+		// Использование лямбда-выражений
+		remote.setCommand(1, 
+				              () -> tv.turnOn(), 
+				              () -> tv.turnOff());
 		
 		remote.onButtonWasPressed(1);
 		remote.offButtonWasPressed(1);
