@@ -5,7 +5,7 @@ public class SimpleRemoteControl {
 	Command[] onCommands;
 	Command[] offCommands;
 	// Заглушка
-	// Command noCommand;
+	NoCommand noCommand;
 	
 	private int maxLimit = 7;
 	
@@ -14,6 +14,15 @@ public class SimpleRemoteControl {
   	// Создать объекты массивы команд
   	onCommands  = new Command[maxLimit];
   	offCommands = new Command[maxLimit];
+  	
+  	// Заглушка
+  	noCommand = new NoCommand();
+  	
+  	// Инициализация заглушками
+  	for(int i = 0; i < maxLimit; i++) {
+  		onCommands[i]  = noCommand;
+  		offCommands[i] = noCommand;
+  	}
   }
   
   public void setCommand(int slot, Command onCommand, Command offCommand) {
