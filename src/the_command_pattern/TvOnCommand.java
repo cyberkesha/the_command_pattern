@@ -4,10 +4,13 @@ public class TvOnCommand implements Command{
 
 	Tv tv;
 	
+	public TvOnCommand(Tv tv) {
+		this.tv = tv;
+	}
+	
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
-		
+		tv.turnOn();
 	}
 
 }
