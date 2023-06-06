@@ -37,4 +37,16 @@ public class SimpleRemoteControl {
   public void offButtonWasPressed(int slot) {
 		offCommands[slot].execute();
 	}
+  
+  public void showStateOnCommandArray() {
+  	for(int i = 0; i < maxLimit; i++) {
+  		System.out.print(onCommands[i] + "\n");
+  	}
+  }
+  
+   public void showStateOffCommandArray() {
+    for(int i = 0; i < maxLimit; i++) {
+    	System.out.print(offCommands[i] + "\n");
+    }
+	}
 }
