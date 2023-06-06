@@ -1,15 +1,14 @@
 package the_command_pattern;
 
-public class TvOnCommand implements Command{
-
+public class TvOffCommand implements Command{
 	Tv tv;
 	
-	public TvOnCommand(Tv tv) {
+	public TvOffCommand(Tv tv) {
 		this.tv = tv;
 	}
 	
 	@Override
 	public void execute() {
-		tv.turnOn();
+		tv.turnOff();
 	}
 }
