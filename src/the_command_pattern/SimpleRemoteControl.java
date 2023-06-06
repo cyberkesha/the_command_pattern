@@ -4,7 +4,9 @@ public class SimpleRemoteControl {
 	// Объявили массивы объектов типа интерфейс Command
 	Command[] onCommands;
 	Command[] offCommands;
-
+	// Заглушка
+	// Command noCommand;
+	
 	private int maxLimit = 7;
 	
 	//constructor
