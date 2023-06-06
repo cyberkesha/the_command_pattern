@@ -6,6 +6,14 @@ public class Main {
 		// Инициатор исполнения команды
 		SimpleRemoteControl remote = new SimpleRemoteControl();
 
+		System.out.print("--------ON COMMANDS-----\n");
+		remote.showStateOnCommandArray();
+
+		System.out.print("--------OFF COMMANDS-----\n");
+		remote.showStateOffCommandArray();
+		
+  // ---------------------------------------------	
+		
 		System.out.print("========================\n");
 		System.out.print("Light:\n\n");
 		
@@ -34,5 +42,13 @@ public class Main {
 		
 		remote.onButtonWasPressed(1);
 		remote.offButtonWasPressed(1);
+
+	  // ---------------------------------------------	
+
+		System.out.print("--------ON COMMANDS-----\n");
+		remote.showStateOnCommandArray();
+
+		System.out.print("--------OFF COMMANDS-----\n");
+		remote.showStateOffCommandArray();
 	}
 }
