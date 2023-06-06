@@ -1,7 +1,7 @@
 package the_command_pattern;
 
 public class Light {
-
+// Исполняющий команду
 	public void on() {
 		System.out.print("Light is ON\n");
 	}
