@@ -13,13 +13,13 @@ public class Main {
 		// Команда с получателем (исполнителем команды)
 		LightOnCommand lightOn = new LightOnCommand(light);
 		
-		remote.setCommand(lightOn);
+		LightOffCommand lightOff = new LightOffCommand(light);
+		
+		remote.setCommand(0, lightOn, lightOff);
 	
 		// По нажатию выполняется команда-объект
-		remote.buttonWasPressed();
+		remote.onButtonWasPressed(0);
+		remote.offButtonWasPressed(0);
 		
-		LightOffCommand lightOff = new LightOffCommand(light);
-		remote.setCommand(lightOff);
-		remote.buttonWasPressed();
 	}
 }
