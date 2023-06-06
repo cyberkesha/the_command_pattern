@@ -2,7 +2,7 @@ package the_command_pattern;
 
 public class SimpleRemoteControl {
 	Command slot;
-	// Контроллер - исполнения
+	// Контроллер - исполнения - инициатор
 	
 	//constructor
   public SimpleRemoteControl() {
