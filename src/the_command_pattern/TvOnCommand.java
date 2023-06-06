@@ -12,4 +12,10 @@ public class TvOnCommand implements Command{
 	public void execute() {
 		tv.turnOn();
 	}
+
+	@Override
+	public void undo() {
+		System.out.print("it's undo for TV turnOn: ");
+		tv.turnOff();
+	}
 }

@@ -22,4 +22,10 @@ public class LightOnCommand implements Command{
 	// Какой метод выполняет исполнитель при выполнении "команды"
 		light.on();
 	}
+
+	@Override
+	public void undo() {
+		System.out.print("it's undo for light.on: ");
+		light.off();
+	}
 }

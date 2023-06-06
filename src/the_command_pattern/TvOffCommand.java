@@ -11,4 +11,10 @@ public class TvOffCommand implements Command{
 	public void execute() {
 		tv.turnOff();
 	}
+
+	@Override
+	public void undo() {
+		System.out.print("it's undo for TV turnOff: ");
+		tv.turnOn();
+	}
 }

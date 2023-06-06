@@ -6,4 +6,9 @@ public class NoCommand implements Command{
 	public void execute() {
 		// Заглушка
 	}
+
+	@Override
+	public void undo() {
+		// Заглушка
+	}
 }

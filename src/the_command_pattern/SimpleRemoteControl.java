@@ -4,6 +4,10 @@ public class SimpleRemoteControl {
 	// Объявили массивы объектов типа интерфейс Command
 	Command[] onCommands;
 	Command[] offCommands;
+	
+	// Отмена
+	Command undoCommand;
+	
 	// Заглушка
 	NoCommand noCommand;
 	
@@ -23,6 +27,8 @@ public class SimpleRemoteControl {
   		onCommands[i]  = noCommand;
   		offCommands[i] = noCommand;
   	}
+  	// Отмена
+  	undoCommand = noCommand;
   }
   
   public void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -32,10 +38,17 @@ public class SimpleRemoteControl {
 	
   public void onButtonWasPressed(int slot) {
 		onCommands[slot].execute();
+		// Запомним какую команду выполнили, что бы применить undo к ней
+		undoCommand = onCommands[slot];
+	}
+  
+  public void undoButtonWasPressed() {
+		undoCommand.undo();
 	}
   
   public void offButtonWasPressed(int slot) {
 		offCommands[slot].execute();
+		undoCommand = offCommands[slot];
 	}
   
   public void showStateOnCommandArray() {
