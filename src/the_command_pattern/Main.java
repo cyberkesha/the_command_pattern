@@ -12,7 +12,7 @@ public class Main {
 		System.out.print("--------OFF COMMANDS-----\n");
 		remote.showStateOffCommandArray();
 		
-  // ---------------------------------------------	
+    // ---------------------------------------------	
 		
 		System.out.print("========================\n");
 		System.out.print("Light:\n\n");
