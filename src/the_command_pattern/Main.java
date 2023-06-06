@@ -17,5 +17,9 @@ public class Main {
 	
 		// По нажатию выполняется команда-объект
 		remote.buttonWasPressed();
+		
+		LightOffCommand lightOff = new LightOffCommand(light);
+		remote.setCommand(lightOff);
+		remote.buttonWasPressed();
 	}
 }
