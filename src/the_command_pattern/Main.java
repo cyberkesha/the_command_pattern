@@ -17,6 +17,8 @@ public class Main {
 		
 		remote.setCommand(0, lightOn, lightOff);
 	
+		System.out.print("Multiply commands\n");
+		
 		// По нажатию выполняется команда-объект
 		remote.onButtonWasPressed(0);
 		remote.offButtonWasPressed(0);
